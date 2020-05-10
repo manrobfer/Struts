@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts  
+Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">  
+
+<struts>  
+
+<include file="login.xml" />
+
+   <package name="default" namespace="/metodo" extends="struts-default">
+     
+		<action name="acao" class="com.javastruts.actions.AcaoAction">		
+	      <result name="success">buscas.jsp</result>
+		  <result name="error">login.jsp</result>		   
+		</action>		
+		
+	   <action name="addMetodo" class="com.javastruts.actions.AcaoAction" method="addMetodo">		
+	       <result name="success">buscas.jsp</result>
+		   <result name="error">login.jsp</result>    
+	  </action>
+	  
+	  <action name="removeMetodo" class="com.javastruts.actions.AcaoAction" method="removeMetodo">		
+	      <result name="success">buscas.jsp</result>
+	      <result name="error">login.jsp</result>    
+	  </action>    
+		    
+  </package>
+  
+ 
+
+</struts>      
+          
